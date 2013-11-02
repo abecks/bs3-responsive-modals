@@ -6080,188 +6080,53 @@ button.close {
   }
 }
 
-.modal-responsive-open {
-  overflow: hidden;
+html,
+body {
+  height: 100%;
 }
 
 .modal-responsive {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  display: none;
-}
-
-.modal-responsive.fade .modal-responsive-dialog {
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-     -moz-transition: -moz-transform 0.3s ease-out;
-       -o-transition: -o-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
-}
-
-.modal-responsive.in .modal-responsive-dialog {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.modal-responsive-dialog {
-  position: fixed;
-  z-index: 1050;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.modal-responsive-content {
-  position: relative;
-  height: 100%;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  outline: none;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-}
-
-.modal-responsive-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  background-color: #000000;
-}
-
-.modal-responsive-backdrop.fade {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.modal-responsive-backdrop.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-.modal-responsive-header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 16.428571429px;
-  padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.modal-responsive-header .close {
-  margin-top: -2px;
-}
-
-.modal-responsive-title {
-  margin: 0;
-  line-height: 1.428571429;
-}
-
-.modal-responsive-body {
-  position: relative;
   height: 100%;
-  padding: 56px 0 74px 0;
+}
+
+.modal-responsive .modal-dialog {
+  height: auto;
+}
+
+.modal-responsive .modal-header,
+.modal-responsive .modal-footer {
+  position: absolute;
+  width: 100%;
+}
+
+.modal-responsive .modal-footer {
+  bottom: 0;
+  background: inherit;
+}
+
+.modal-responsive .modal-content {
   overflow: hidden;
 }
 
-.modal-responsive-scrollpane {
-  width: 100%;
-  height: 100%;
+.modal-responsive .modal-body {
+  padding: 0;
+  overflow: hidden;
+  border-top: 56px solid transparent;
+  border-bottom: 74px solid transparent;
+}
+
+.modal-responsive .modal-scrollpane {
+  max-height: 400px;
   padding: 20px;
   overflow: auto;
 }
 
-.modal-responsive-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 19px 20px 20px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
-
-.modal-responsive-footer:before,
-.modal-responsive-footer:after {
-  display: table;
-  content: " ";
-}
-
-.modal-responsive-footer:after {
-  clear: both;
-}
-
-.modal-responsive-footer:before,
-.modal-responsive-footer:after {
-  display: table;
-  content: " ";
-}
-
-.modal-responsive-footer:after {
-  clear: both;
-}
-
-.modal-responsive-footer .btn + .btn {
-  margin-bottom: 0;
-  margin-left: 5px;
-}
-
-.modal-responsive-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-
-.modal-responsive-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
-
 @media screen and (min-width: 768px) {
-  .modal-responsive {
-    position: absolute;
-  }
-  .modal-responsive-dialog,
-  .modal-responsive-content,
-  .modal-responsive-body,
-  .modal-responsive-scrollpane {
-    height: auto;
-  }
-  .modal-responsive-header,
-  .modal-responsive-body,
-  .modal-responsive-footer {
-    position: static;
-  }
-  .modal-responsive-dialog {
-    position: absolute;
-    left: 300px;
-    width: 600px;
-    height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .modal-responsive-content {
-    height: auto;
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-  .modal-responsive-body {
-    padding: 0;
-    overflow: auto;
-  }
-  .modal-responsive-scrollpane {
-    position: relative;
+  .modal-responsive .modal-dialog {
+    max-height: none;
   }
 }
 
